@@ -1,0 +1,24 @@
+{
+  "name": "8b-ai-chat",
+  "version": "1.0.0",
+  "description": "8B Ai Chat Application",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/index.tsx --bundle --outfile=index.js --platform=browser --format=esm --jsx=automatic --external:@google/genai --define:process.env.API_KEY=\\\"$API_KEY\\\"",
+    "start": "http-server -p 8080 -c-1",
+    "dev": "npm run build && npm start"
+  },
+  "keywords": [
+    "ai",
+    "chat",
+    "gemini"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.20.2",
+    "typescript": "^5.3.3",
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {}
+}

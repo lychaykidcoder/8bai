@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx", // or "react-jsxdev" for development, "preserve" if esbuild handles JSX transform
+    "jsxImportSource": "react", // Optional: if you plan to use React patterns, though not strictly needed for basic JSX with esbuild
+    "outDir": "./dist", // Not strictly used by esbuild in this setup as outfile is specified
+    "rootDir": "./src",
+    "baseUrl": "."
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
+}
